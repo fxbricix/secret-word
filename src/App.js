@@ -56,6 +56,7 @@ function App() {
   }, [pickWordAndCategory]);
 
   const buttonStartGame = () => {
+    setScore(0);
     setGameStage(stages[1].name);
     startGame();
   }
