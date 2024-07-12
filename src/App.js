@@ -77,7 +77,7 @@ function App() {
     } else {
       setWrongLetters((actualWrongLetters) => [
         ...actualWrongLetters,
-        normalizedLetter
+        normalizedLetter + ', '
       ]);
       
       setGuesses((actualGuesses) => actualGuesses - 1);
