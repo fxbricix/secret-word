@@ -25,13 +25,18 @@ const Game = ({
   return (
     <div className="game">
       <p className="points">
-        <span>Pontuação: {score}</span>
+        <span>Pontuação:</span>
+        <span className="numberPoint"> {score}</span>
       </p>
       <h1>Adivinhe a palavra: </h1>
       <h3 className="tip">
         Dica sobre a palavra: <span>{pickedCategory}</span>
       </h3>
-      <p>Você ainda tem {guesses} tentativa(s).</p>
+      <p className="spanAttempts">
+        <span>Você ainda tem </span>
+        <span className="attempts">{guesses} </span>
+        <span>tentativa(s).</span>
+      </p>
       <div className="wordContainer">
         {letters.map((letter, i) =>
           guessedLetters.includes(letter) ? (

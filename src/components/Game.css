@@ -4,6 +4,20 @@
 
 .points span {
     font-weight: bold;
+    font-size: 1.4em;
+}
+
+.numberPoint{
+    color: #ECFA00;
+}
+
+.spanAttempts{
+    font-size: 1.3em;
+}
+
+.attempts{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
 }
 
 .tip span{
