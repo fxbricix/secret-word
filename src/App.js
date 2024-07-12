@@ -53,9 +53,12 @@ function App() {
       setPickedWord(word);
       setPickedCategory(randomCategory);
       setLetters(wordLetters);
-      setScore(0);
-      setGameStage(stages[0].name);
   }, [pickWordAndCategory]);
+
+  const buttonStartGame = () => {
+    setGameStage(stages[1].name);
+    startGame();
+  }
 
   // process the letter input
   const verifyLetter = (letter) => {
@@ -111,7 +114,7 @@ function App() {
 
   return (
     <div className="App">
-      {gameStage === 'start' && <StartScreen startGame={startGame}/>}
+      {gameStage === 'start' && <StartScreen buttonStartGame={buttonStartGame}/>}
       {gameStage === 'game' && 
         <Game verifyLetter={verifyLetter} 
         pickedWord={pickedWord} 
