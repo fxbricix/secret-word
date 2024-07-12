@@ -53,8 +53,8 @@ function App() {
       setPickedWord(word);
       setPickedCategory(randomCategory);
       setLetters(wordLetters);
-
-    setGameStage(stages[0].name);
+      setScore(0);
+      setGameStage(stages[0].name);
   }, [pickWordAndCategory]);
 
   // process the letter input
